@@ -16,6 +16,7 @@ public class ControladorSeleccionUnica implements ActionListener {
     public ControladorSeleccionUnica(InterfazPreguntaSeleccionUnica vista) {
         this.vista = vista;
         vista.volver.addActionListener(this);
+        vista.setVisible(true);
     }
 
     @Override

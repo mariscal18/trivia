@@ -19,16 +19,23 @@ public class ControladorJugar implements ActionListener {
 
     public ControladorJugar(InterfazMenuJugar vista) {
         this.vista = vista;
+        vista.jugar.addActionListener(this);
         vista.volver.addActionListener(this);
         vista.niveles.addActionListener(this);
+        vista.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         
+        System.out.println(e.getSource());
+        
         if (e.getSource() == vista.jugar) {
             
             int opcion = vista.niveles.getSelectedIndex();
+            
+            System.out.println(opcion);
+            System.out.println("hoal");
             
             switch(opcion){
                 case 0 -> {

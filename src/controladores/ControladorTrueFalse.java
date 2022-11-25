@@ -16,6 +16,7 @@ public class ControladorTrueFalse implements ActionListener {
     public ControladorTrueFalse(InterfazPreguntaTrueFalse vista) {
         this.vista = vista;
         vista.volver.addActionListener(this);
+        vista.setVisible(true);
     }
 
     @Override

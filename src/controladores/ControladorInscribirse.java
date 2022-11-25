@@ -33,6 +33,8 @@ public class ControladorInscribirse implements ActionListener {
                 try {
                     lista.agregar(new Usuario(user, password));
                     Juego.escribirLista();
+                    //DISPOSE
+                    //CONTROLADOR INICIAR ()
                     System.out.println(lista.getListaUsuarios().length);
                 } catch (IOException | ClassNotFoundException ex) {
                     Logger.getLogger(ControladorInscribirse.class.getName()).log(Level.SEVERE, null, ex);

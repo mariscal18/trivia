@@ -29,7 +29,7 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        area = new javax.swing.JTextArea();
         volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -37,9 +37,9 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("ESTADÍSTICAS DE ALGUIEN");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        area.setColumns(20);
+        area.setRows(5);
+        jScrollPane1.setViewportView(area);
 
         volver.setBackground(new java.awt.Color(153, 153, 255));
         volver.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -123,9 +123,9 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextArea area;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

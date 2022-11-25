@@ -16,6 +16,8 @@ public class ControladorEstadisticas implements ActionListener {
     public ControladorEstadisticas(InterfazMenuEstadisticas vista) {
         this.vista = vista;
         vista.volver.addActionListener(this);
+        //vista.area.setText(listaUsuarios[index].printStats());
+        vista.setVisible(true);
     }
 
     @Override

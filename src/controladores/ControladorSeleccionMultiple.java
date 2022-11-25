@@ -16,6 +16,7 @@ public class ControladorSeleccionMultiple implements ActionListener {
     public ControladorSeleccionMultiple(InterfazPreguntaSeleccionMultiple vista) {
         this.vista = vista;
         vista.volver.addActionListener(this);
+        vista.setVisible(true);
     }
 
     @Override

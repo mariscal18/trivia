@@ -15,12 +15,24 @@ import vistas.InterfazMenuEstadisticas;
 public class ControladorIniciar implements ActionListener {
 
     private InterfazMenuIniciar vista;
-
+    private static int index;
+    
     public ControladorIniciar(InterfazMenuIniciar vista) {
+        this.index = 0;
         this.vista = vista;
         vista.jugar.addActionListener(this);
         vista.estadisticas.addActionListener(this);
         vista.volver.addActionListener(this);
+        vista.setVisible(true);
+    }
+
+    public ControladorIniciar(InterfazMenuIniciar vista, int index) {
+        this.index = index;
+        this.vista = vista;
+        vista.jugar.addActionListener(this);
+        vista.estadisticas.addActionListener(this);
+        vista.volver.addActionListener(this);
+        vista.setVisible(true);
     }
 
     @Override
