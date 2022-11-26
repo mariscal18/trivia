@@ -8,6 +8,10 @@ import estructuras.ListaPreguntas;
 import java.io.IOException;
 import modelo.ListaUsuarios;
 import modelo.Usuario;
+import modelo.Pregunta;
+import modelo.PreguntaSeleccionMultiple;
+import modelo.PreguntaSeleccionUnica;
+import modelo.PreguntaVerdaderoFalso;
 import vistas.InterfazMenuBienvenida;
 
 /**
@@ -25,17 +29,20 @@ public class Juego {
     public static LectorPreguntas cargador;
     public static final String fileUsuarios = "usuarios.dat";
     public static final String ruta = "file.txt";
-    
+    public static ListaPreguntas lista1;
+    public static ListaPreguntas lista2;
+    public static ListaPreguntas lista3;
+
     public static void cargarListaPreguntas() throws IOException, ClassNotFoundException {
-        
+
         cargador.open(ruta);
         String ruta = cargador.readRuta();
         cargador.close();
-        
+
         cargador.open(ruta);
         int a = cargador.contarLineas();
         cargador.close();
-        
+
         cargador.open(ruta);
         listaPreguntas.setListaPreguntas(cargador.readListaPreguntas(a));
         cargador.close();
@@ -57,28 +64,31 @@ public class Juego {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        
-        listaPreguntas = new ListaPreguntas();
-        cargador = new LectorPreguntas();
-        cargarListaPreguntas();
-        
-        System.out.println(listaPreguntas.getListaPreguntas().length);
-        System.out.println(listaPreguntas.getListaPreguntas()[1]);
 
-        //ESTO ES TEMPORAL, PARA PROBAR LAS PREGUNTAS
-        //NÓTESE QUE QUEMADO NO GUARDA EN NINGUNA PARTE LOS DATOS DE LAS ESTADÍSTICAS
-        Usuario quemado = new Usuario("Quemado", "burnt");
+        listaPreguntas = new ListaPreguntas();
         listaUsuarios = new ListaUsuarios();
-        listaUsuarios.agregar(quemado);
-        //*********************************************************************************
-        
-        //ESTE CODIGO DEBE DESCOMENTARSE CUANDO ESTÉ LISTA LA VALIDACIÓN DE USUARIO
-        /*
-        listaUsuarios = new ListaUsuarios();
-        */
-        
+        cargador = new LectorPreguntas();
         lector = new LectorBinario();
         escritor = new EscritorBinario();
+        cargarListaPreguntas();
+        cargarListaUsuarios();
+
+        lista1 = new ListaPreguntas();
+        lista2 = new ListaPreguntas();
+        lista3 = new ListaPreguntas();
+
+        for (Pregunta p : listaPreguntas.getListaPreguntas()) {
+            if (p instanceof PreguntaVerdaderoFalso) {
+                lista1.agregar(p);
+            }
+            if (p instanceof PreguntaSeleccionUnica) {
+                lista2.agregar(p);
+            }
+            if (p instanceof PreguntaSeleccionMultiple) {
+                lista3.agregar(p);
+            }
+        }
+
         InterfazMenuBienvenida menu = new InterfazMenuBienvenida();
         ControladorMenuBienvenida controlador = new ControladorMenuBienvenida(menu);
 

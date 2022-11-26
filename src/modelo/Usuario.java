@@ -28,6 +28,56 @@ public class Usuario implements Serializable {
         niv3_incorrect = 0;
     }
 
+    public int getNiv1_correct() {
+        return niv1_correct;
+    }
+
+    public void setNiv1_correct(int niv1_correct) {
+        this.niv1_correct = niv1_correct;
+    }
+
+    public int getNiv1_incorrect() {
+        return niv1_incorrect;
+    }
+
+    public void setNiv1_incorrect(int niv1_incorrect) {
+        this.niv1_incorrect = niv1_incorrect;
+    }
+
+    public int getNiv2_correct() {
+        return niv2_correct;
+    }
+
+    public void setNiv2_correct(int niv2_correct) {
+        this.niv2_correct = niv2_correct;
+    }
+
+    public int getNiv2_incorrect() {
+        return niv2_incorrect;
+    }
+
+    public void setNiv2_incorrect(int niv2_incorrect) {
+        this.niv2_incorrect = niv2_incorrect;
+    }
+
+    public int getNiv3_correct() {
+        return niv3_correct;
+    }
+
+    public void setNiv3_correct(int niv3_correct) {
+        this.niv3_correct = niv3_correct;
+    }
+
+    public int getNiv3_incorrect() {
+        return niv3_incorrect;
+    }
+
+    public void setNiv3_incorrect(int niv3_incorrect) {
+        this.niv3_incorrect = niv3_incorrect;
+    }
+    
+    
+
     public String getUser() {
         return user;
     }

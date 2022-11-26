@@ -27,38 +27,38 @@ public class InterfazPreguntaTrueFalse extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        v = new javax.swing.JButton();
+        f = new javax.swing.JButton();
         volver = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        texto = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jButton1.setBackground(new java.awt.Color(153, 255, 102));
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jButton1.setText("V");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        v.setBackground(new java.awt.Color(153, 255, 102));
+        v.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        v.setText("V");
+        v.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                vActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 153, 153));
-        jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jButton2.setText("F");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        f.setBackground(new java.awt.Color(255, 153, 153));
+        f.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        f.setText("F");
+        f.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                fActionPerformed(evt);
             }
         });
 
         volver.setBackground(new java.awt.Color(153, 153, 255));
         volver.setText("VOLVER");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        texto.setColumns(20);
+        texto.setRows(5);
+        jScrollPane1.setViewportView(texto);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,9 +68,9 @@ public class InterfazPreguntaTrueFalse extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(jButton1)
+                        .addComponent(v)
                         .addGap(58, 58, 58)
-                        .addComponent(jButton2))
+                        .addComponent(f))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -86,8 +86,8 @@ public class InterfazPreguntaTrueFalse extends javax.swing.JDialog {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(v, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(f, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(volver)
                 .addContainerGap())
@@ -96,13 +96,13 @@ public class InterfazPreguntaTrueFalse extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void fActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_fActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_vActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,10 +148,10 @@ public class InterfazPreguntaTrueFalse extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    public javax.swing.JButton f;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JTextArea texto;
+    public javax.swing.JButton v;
     public javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
