@@ -30,10 +30,10 @@ public class ControladorTrueFalse implements ActionListener {
         vista.volver.addActionListener(this);
         vista.v.addActionListener(this);
         vista.f.addActionListener(this);
-        vista.setVisible(true);
         genNum();
         actual = (PreguntaVerdaderoFalso) lista.getListaPreguntas()[questionIndex];
         vista.texto.setText(actual.getTexto());
+        vista.setVisible(true);
     }
 
     @Override
