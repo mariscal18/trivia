@@ -33,7 +33,11 @@ public class Juego {
         cargador.close();
         
         cargador.open(ruta);
-        listaPreguntas.setListaPreguntas(cargador.readListaPreguntas(cargador.contarLineas()));
+        int a = cargador.contarLineas();
+        cargador.close();
+        
+        cargador.open(ruta);
+        listaPreguntas.setListaPreguntas(cargador.readListaPreguntas(a));
         cargador.close();
     }
 
@@ -58,7 +62,8 @@ public class Juego {
         cargador = new LectorPreguntas();
         cargarListaPreguntas();
         
-        System.out.println(listaPreguntas.getListaPreguntas()[0]);
+        System.out.println(listaPreguntas.getListaPreguntas().length);
+        System.out.println(listaPreguntas.getListaPreguntas()[1]);
 
         //ESTO ES TEMPORAL, PARA PROBAR LAS PREGUNTAS
         //NÓTESE QUE QUEMADO NO GUARDA EN NINGUNA PARTE LOS DATOS DE LAS ESTADÍSTICAS

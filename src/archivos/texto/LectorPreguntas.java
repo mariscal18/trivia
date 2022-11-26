@@ -80,6 +80,7 @@ public class LectorPreguntas {
 
             try {
                 String line = lector.readLine();
+                System.out.println(line);
                 while (line != null) {
                     Pregunta pregunta = null;
                     String datos[];
