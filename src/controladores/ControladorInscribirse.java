@@ -32,7 +32,7 @@ public class ControladorInscribirse implements ActionListener {
             if (validarLength(user, 4, 8) && validarLength(password, 3, 10)) {
                 try {
                     lista.agregar(new Usuario(user, password));
-                    Juego.escribirLista();
+                    Juego.escribirListaUsuarios();
                     //DISPOSE
                     //CONTROLADOR INICIAR ()
                     System.out.println(lista.getListaUsuarios().length);

@@ -34,9 +34,6 @@ public class ControladorJugar implements ActionListener {
             
             int opcion = vista.niveles.getSelectedIndex();
             
-            System.out.println(opcion);
-            System.out.println("hoal");
-            
             switch(opcion){
                 case 0 -> {
                     InterfazPreguntaTrueFalse interfaz = new InterfazPreguntaTrueFalse(ControladorMenuBienvenida.vista, true);

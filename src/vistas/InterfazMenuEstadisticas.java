@@ -27,15 +27,15 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        label = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         area = new javax.swing.JTextArea();
         volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("ESTADÍSTICAS DE ALGUIEN");
+        label.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        label.setText("ESTADÍSTICAS DE ALGUIEN");
 
         area.setColumns(20);
         area.setRows(5);
@@ -57,7 +57,7 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 76, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
+                        .addComponent(label)
                         .addGap(94, 94, 94))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(144, 144, 144)
@@ -68,7 +68,7 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -124,8 +124,8 @@ public class InterfazMenuEstadisticas extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextArea area;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel label;
     public javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

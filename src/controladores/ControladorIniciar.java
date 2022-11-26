@@ -15,7 +15,7 @@ import vistas.InterfazMenuEstadisticas;
 public class ControladorIniciar implements ActionListener {
 
     private InterfazMenuIniciar vista;
-    private static int index;
+    public static int index;
     
     public ControladorIniciar(InterfazMenuIniciar vista) {
         this.index = 0;
