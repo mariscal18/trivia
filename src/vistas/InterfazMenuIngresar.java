@@ -8,12 +8,12 @@ package vistas;
  *
  * @author maris
  */
-public class InterfazMenuInscribirse extends javax.swing.JDialog {
+public class InterfazMenuIngresar extends javax.swing.JDialog {
 
     /**
      * Creates new form MenuInscribirse
      */
-    public InterfazMenuInscribirse(java.awt.Frame parent, boolean modal) {
+    public InterfazMenuIngresar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -42,13 +42,13 @@ public class InterfazMenuInscribirse extends javax.swing.JDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
-        jLabel1.setText("INSCRIBIRSE");
+        jLabel1.setText("INGRESAR");
 
         continuar.setBackground(new java.awt.Color(191, 87, 93));
         continuar.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         continuar.setForeground(new java.awt.Color(255, 255, 255));
         continuar.setText("CONTINUAR");
-        continuar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        continuar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         continuar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 continuarActionPerformed(evt);
@@ -72,13 +72,14 @@ public class InterfazMenuInscribirse extends javax.swing.JDialog {
                         .addComponent(continuar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(109, 109, 109)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2)
-                                .addComponent(user)))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(user)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(31, 31, 31)))))
                 .addContainerGap(107, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -125,14 +126,18 @@ public class InterfazMenuInscribirse extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazMenuInscribirse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazMenuIngresar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazMenuInscribirse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazMenuIngresar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazMenuInscribirse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazMenuIngresar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazMenuInscribirse.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazMenuIngresar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -141,7 +146,7 @@ public class InterfazMenuInscribirse extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                InterfazMenuInscribirse dialog = new InterfazMenuInscribirse(new javax.swing.JFrame(), true);
+                InterfazMenuIngresar dialog = new InterfazMenuIngresar(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

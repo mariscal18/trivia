@@ -1,10 +1,13 @@
 package modelo;
 
 /**
- * Esta clase consiste en el objeto PreguntaSeleccionMultiple
- * Estas preguntas tienen cuatro opciones dentro de las cuales se pueden escoger varias combinaciones de ellas
+ * Esta clase consiste en el objeto PreguntaSeleccionMultiple Estas preguntas
+ * tienen cuatro opciones dentro de las cuales se pueden escoger varias
+ * combinaciones de ellas
+ *
  * @version 3 de noviembre 2022
- * @author @author Keiron Garro Matamoros C23212, Jorge Zúñiga Torres C08740, Jeaustin Castro López C21912
+ * @author @author Keiron Garro Matamoros C23212, Jorge Zúñiga Torres C08740,
+ * Jeaustin Castro López C21912
  */
 public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
 
@@ -18,14 +21,14 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
      * Construye una pregunta de selección múltiple
      *
      */
-    public PreguntaSeleccionMultiple(){
-        
+    public PreguntaSeleccionMultiple() {
+
     }
-    
+
     /**
      * Construye una pregunta de selección múltiple
      *
-     * 
+     *
      * @param textoPregunta El texto de la pregunta
      * @param categoria La categoría de la pregunta
      * @param respuesta1 La respuesta 1 de la pregunta
@@ -36,15 +39,15 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
      * @param valorRespuesta3 El valor de la respuesta 3 de la pregunta
      * @param respuesta4 La respuesta 4 de la pregunta
      * @param valorRespuesta4 El valor de la respuesta 4 de la pregunta
-     * @param contador El contador  de la pregunta
+     * @param contador El contador de la pregunta
      */
-    public PreguntaSeleccionMultiple(String textoPregunta, String categoria, String respuesta1, boolean valorRespuesta1, String respuesta2, boolean valorRespuesta2, String respuesta3, boolean valorRespuesta3, String respuesta4, boolean valorRespuesta4,int contador) {
+    public PreguntaSeleccionMultiple(String textoPregunta, String categoria, String respuesta1, boolean valorRespuesta1, String respuesta2, boolean valorRespuesta2, String respuesta3, boolean valorRespuesta3, String respuesta4, boolean valorRespuesta4, int contador) {
         super("SM", textoPregunta, categoria, respuesta1, respuesta2, respuesta3, respuesta4);
         this.valorRespuesta1 = valorRespuesta1;
         this.valorRespuesta2 = valorRespuesta2;
         this.valorRespuesta3 = valorRespuesta3;
         this.valorRespuesta4 = valorRespuesta4;
-        this.id = contador+1;      
+        this.id = contador + 1;
     }
 
     /**
@@ -127,10 +130,10 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
     public int getContador() {
         return contador;
     }
-    
+
     /**
-     * Método que convierte los datos de la pregunta en una hilera de texto
-     * para ser leída y escrita en archivos de texto
+     * Método que convierte los datos de la pregunta en una hilera de texto para
+     * ser leída y escrita en archivos de texto
      *
      * @return La hilera de texto con los datos de la pregunta
      */
@@ -139,200 +142,9 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
         return tipo + "-" + id + "-" + textoPregunta + "-" + categoria + "-" + respuesta1 + "-" + valorRespuesta1 + "-" + respuesta2 + "-" + valorRespuesta2 + "-" + respuesta3 + "-" + valorRespuesta3 + "-" + respuesta4 + "-" + valorRespuesta4;
     }
 
-    /**
-     * Método que evalúa si la respuesta es correcta
-     *
-     * @return True o False, dependiendo si fue respuesta correcta
-     */
     @Override
     public boolean evaluarRespuesta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    /**
-     * Método que evalúa si la respuesta es correcta
-     *
-     * @param opcionUsuario La opcion del usuario
-     * @return True o False, dependiendo si fue respuesta correcta
-     */
-    public boolean evaluarRespuesta(int opcionUsuario) {
-        boolean valido = false;
-
-        switch (opcionUsuario) {
-            case 1:
-                if (valorRespuesta1) {
-                    valido = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
-                    valido = true;
-                }
-                break;
-        }
-        return valido;
-    }
-
-    /**
-     * Método que evalúa si la respuesta es correcta
-     *
-     * @param opcionUsuario1 La opcion1
-     * @param opcionUsuario2 La opcion2
-     * @return True o False, dependiendo si fue respuesta correcta
-     */
-    public boolean evaluarRespuesta(int opcionUsuario1, int opcionUsuario2) {
-        boolean valido1 = false;
-        boolean valido2 = false;
-        boolean validoFinal = false;
-
-        switch (opcionUsuario1) {
-            case 1:
-                if (valorRespuesta1) {
-                    valido1 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido1 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido1 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
-                    valido1 = true;
-                }
-                break;
-        }
-
-        switch (opcionUsuario2) {
-            case 1:
-                if (valorRespuesta1) {
-                    valido2 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido2 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido2 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
-                    valido2 = true;
-                }
-                break;
-        }
-        if (valido1 && valido2) {
-            validoFinal = true;
-        }
-
-        return validoFinal;
-    }
-
-    /**
-     * Método que evalúa si la respuesta es correcta
-     *
-     * @param opcionUsuario1 La opcion1
-     * @param opcionUsuario2 La opcion2
-     * @param opcionUsuario3 La opcion3
-     * @return True o False, dependiendo si fue respuesta correcta
-     */
-    public boolean evaluarRespuesta(int opcionUsuario1, int opcionUsuario2, int opcionUsuario3) {
-        boolean valido1 = false;
-        boolean valido2 = false;
-        boolean valido3 = false;
-        boolean validoFinal = false;
-
-        switch (opcionUsuario1) {
-            case 1:
-                if (valorRespuesta1) {
-                    valido1 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido1 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido1 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
-                    valido1 = true;
-                }
-                break;
-        }
-
-        switch (opcionUsuario2) {
-            case 1:
-                if (valorRespuesta1) {
-                    valido2 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido2 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido2 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
-                    valido2 = true;
-                }
-                break;
-        }
-        switch (opcionUsuario3) {
-            case 1:
-                if (valorRespuesta1) {
-                    valido3 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido3 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido3 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
-                    valido3 = true;
-                }
-                break;
-        }
-        if (valido1 && valido2 && valido3) {
-            validoFinal = true;
-        }
-
-        return validoFinal;
+        return true;
     }
 
     /**
@@ -356,19 +168,8 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
                 if (valorRespuesta1) {
                     valido1 = true;
                 }
-                break;
             case 2:
-                if (valorRespuesta2) {
-                    valido1 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido1 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
+                if (valorRespuesta1 == false) {
                     valido1 = true;
                 }
                 break;
@@ -376,77 +177,47 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
 
         switch (opcionUsuario2) {
             case 1:
-                if (valorRespuesta1) {
-                    valido2 = true;
-                }
-                break;
-            case 2:
                 if (valorRespuesta2) {
                     valido2 = true;
                 }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido2 = true;
-                }
-                break;
-            case 4:
-                if (valorRespuesta4) {
+            case 2:
+                if (valorRespuesta2 == false) {
                     valido2 = true;
                 }
                 break;
         }
+
         switch (opcionUsuario3) {
             case 1:
-                if (valorRespuesta1) {
-                    valido3 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido3 = true;
-                }
-                break;
-            case 3:
                 if (valorRespuesta3) {
                     valido3 = true;
                 }
-                break;
-            case 4:
-                if (valorRespuesta4) {
+            case 2:
+                if (valorRespuesta3 == false) {
                     valido3 = true;
                 }
                 break;
         }
-        switch (opcionUsuario4) {
+
+        switch (opcionUsuario3) {
             case 1:
-                if (valorRespuesta1) {
-                    valido4 = true;
-                }
-                break;
-            case 2:
-                if (valorRespuesta2) {
-                    valido4 = true;
-                }
-                break;
-            case 3:
-                if (valorRespuesta3) {
-                    valido4 = true;
-                }
-                break;
-            case 4:
                 if (valorRespuesta4) {
+                    valido4 = true;
+                }
+            case 2:
+                if (valorRespuesta4 == false) {
                     valido4 = true;
                 }
                 break;
         }
+
         if (valido1 && valido2 && valido3 && valido4) {
             validoFinal = true;
         }
 
         return validoFinal;
     }
-    
+
     /**
      * Método que imprime datos cuando se imprime el objeto
      *
@@ -455,18 +226,21 @@ public class PreguntaSeleccionMultiple extends PreguntaCuatroOpciones {
     @Override
     public String toString() {
         String categoriaEnTexto = "";
-        
-        switch(this.categoria){
-            case "1" -> categoriaEnTexto = "Deporte";
-            case "2" -> categoriaEnTexto = "Entrenamiento";
-            case "3" -> categoriaEnTexto = "Historia";
+
+        switch (this.categoria) {
+            case "1" ->
+                categoriaEnTexto = "Deporte";
+            case "2" ->
+                categoriaEnTexto = "Entrenamiento";
+            case "3" ->
+                categoriaEnTexto = "Historia";
         }
-        
+
         return "TEXTO PREGUNTA = " + this.textoPregunta + "\nCATEGORÍA = " + categoriaEnTexto + "\n"
-                + "OPCION 1 = " + this.respuesta1 + ", " + this.valorRespuesta1 +
-                "\nOPCION 2 = " + this.respuesta2 + ", " + this.valorRespuesta2 +
-                "\nOPCION 3 = " + this.respuesta3 + ", " + this.valorRespuesta3 +
-                "\nOPCION 4 = " + this.respuesta4 + ", " + this.valorRespuesta4;
+                + "OPCION 1 = " + this.respuesta1 + ", " + this.valorRespuesta1
+                + "\nOPCION 2 = " + this.respuesta2 + ", " + this.valorRespuesta2
+                + "\nOPCION 3 = " + this.respuesta3 + ", " + this.valorRespuesta3
+                + "\nOPCION 4 = " + this.respuesta4 + ", " + this.valorRespuesta4;
     }
 
 }

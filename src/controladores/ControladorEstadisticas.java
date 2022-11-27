@@ -20,8 +20,9 @@ public class ControladorEstadisticas implements ActionListener {
     public ControladorEstadisticas(InterfazMenuEstadisticas vista) {
         this.vista = vista;
         vista.volver.addActionListener(this);
-        vista.label.setText("Estadísticas de " + lista.getListaUsuarios()[index].getUser());
+        vista.jTextField1.setText("Estadísticas de " + lista.getListaUsuarios()[index].getUser());
         vista.area.setText(lista.getListaUsuarios()[index].printStats());
+        this.vista.setLocationRelativeTo(null);
         vista.setVisible(true);
     }
 

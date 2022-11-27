@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class ListaPreguntas implements Serializable {
 
     private Pregunta[] listaPreguntas;
-    
+
     public ListaPreguntas() {
         this.listaPreguntas = new Pregunta[0];
     }
@@ -38,4 +38,9 @@ public class ListaPreguntas implements Serializable {
     public Pregunta[] getListaPreguntas() {
         return listaPreguntas;
     }
+    
+    public void eliminarPregunta(int index){
+        listaPreguntas[index] = null;
+    }
+
 }

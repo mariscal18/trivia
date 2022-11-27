@@ -2,27 +2,28 @@
  *
  * @author Administrator
  */
-
 package controladores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import vistas.InterfazMenuIniciar;
 import vistas.InterfazMenuJugar;
-import controladores.ControladorMenuBienvenida;
+import vistas.InterfazMenuBienvenida;
 import vistas.InterfazMenuEstadisticas;
 
 public class ControladorIniciar implements ActionListener {
 
     private InterfazMenuIniciar vista;
+
     public static int index;
-    
+
     public ControladorIniciar(InterfazMenuIniciar vista) {
         this.index = 0;
         this.vista = vista;
         vista.jugar.addActionListener(this);
         vista.estadisticas.addActionListener(this);
         vista.volver.addActionListener(this);
+        
         vista.setVisible(true);
     }
 
@@ -32,6 +33,7 @@ public class ControladorIniciar implements ActionListener {
         vista.jugar.addActionListener(this);
         vista.estadisticas.addActionListener(this);
         vista.volver.addActionListener(this);
+        this.vista.setLocationRelativeTo(null);
         vista.setVisible(true);
     }
 

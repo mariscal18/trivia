@@ -2,24 +2,26 @@
  *
  * @author Administrator
  */
-
 package controladores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import vistas.InterfazMenuBienvenida;
+import vistas.InterfazMenuIngresar;
 import vistas.InterfazMenuIniciar;
 import vistas.InterfazMenuInscribirse;
 
 public class ControladorMenuBienvenida implements ActionListener {
 
     public static InterfazMenuBienvenida vista;
-    
+
     public ControladorMenuBienvenida(InterfazMenuBienvenida vista) {
         this.vista = vista;
         vista.inscribirse.addActionListener(this);
         vista.ingresar.addActionListener(this);
         vista.salir.addActionListener(this);
+        this.vista.setLocationRelativeTo(null);
+        this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
     }
 
@@ -28,11 +30,11 @@ public class ControladorMenuBienvenida implements ActionListener {
 
         if (e.getSource() == vista.inscribirse) {
             InterfazMenuInscribirse interfaz = new InterfazMenuInscribirse(vista, true);
-            ControladorInscribirse controlador = new ControladorInscribirse(interfaz);
+            ControladorInscribirse controlador = new ControladorInscribirse(interfaz, vista);
         }
         if (e.getSource() == vista.ingresar) {
-            InterfazMenuIniciar interfaz = new InterfazMenuIniciar(vista, true);
-            ControladorIniciar controlador = new ControladorIniciar(interfaz);
+            InterfazMenuIngresar interfaz = new InterfazMenuIngresar(vista, true);
+            ControladorIngresar controlador = new ControladorIngresar(interfaz, vista);
         }
         if (e.getSource() == vista.salir) {
             vista.dispose();
